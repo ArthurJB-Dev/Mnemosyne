@@ -14,7 +14,7 @@
     /* Estilizacao aqui dentro*/
     height: 80px;
 
-    display: flex; /*muda aorientação para lado a lado*/
+    display: flex; /*muda a orientação para lado a lado*/
     align-items: center; /*deixa o texto centralizado verticalmente*/
     justify-content: space-between; /*joga os elementos para os cantos*/
     
