@@ -57,6 +57,6 @@ let n1 = "42.5123";
 n1 = Number(n1);
 console.log(n1);
 console.log(parseInt(n1));
-console.log(parseFloat("42"));
+console.log(parseFloat("42.12Ae")); //string para texto
 
 
