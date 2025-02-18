@@ -1,4 +1,4 @@
-// Estruturas Condicionais
+// Condicionais
 
 // Exercício 1
 //let num = prompt("Digite um numero:");
