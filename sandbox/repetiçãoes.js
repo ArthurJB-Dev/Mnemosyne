@@ -66,4 +66,33 @@ alert("Você acertou!"); }
 //alert("A soma dos dígitos é: " + soma);
 
 // Exercício 8
+// const numero = prompt("Digite um número para calcular o fatorial:");
+// let fatorial = 1;
+// for (let i = 1; i <= numero; i++) {
+//   fatorial *= i;
+// } console.log(`O fatorial de ${numero} é ${fatorial}`);
+
+// Exercício 9
+// Pedir o número ao usuário
+const numero = parseInt(prompt("Digite um número para inverter:"));
+
+// Variáveis para armazenar o número invertido e o número original
+let numeroInvertido = 0;
+let numeroOriginal = numero;
+
+// Inverter os dígitos com um laço while
+while (numero > 0) {
+  // Pegar o último dígito
+  let digito = numero % 10;
+  
+  // Adicionar o dígito ao número invertido
+  numeroInvertido = (numeroInvertido * 10) + digito;
+  
+  // Remover o último dígito do número
+  numero = Math.floor(numero / 10);
+}
+
+// Exibir o número invertido
+console.log(`Número original: ${numeroOriginal}`);
+console.log(`Número invertido: ${numeroInvertido}`);
 
