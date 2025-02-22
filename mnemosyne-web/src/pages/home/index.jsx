@@ -1,8 +1,24 @@
-import "./home.css";
-import logo from "../../assets/icons/mnemosyne-logo.svg";
+import { useEffect } from "react";
 import Header from "../../componentes/header";
+import "./home.css";
+import memory from "../../services/memory";
 
 const Home = () => {
+
+    useEffect (() => {
+        // Esse método é executado toda vez que a tela inicia.
+        getMemoriesList();
+
+    },[]);
+
+    const getMemoriesList = async () => {
+
+        const lista = await memory.getMemories();
+
+        console.log("Lista: ", lista);
+
+    }
+
     return (
         <>
 
