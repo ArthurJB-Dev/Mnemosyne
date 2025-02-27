@@ -27,6 +27,22 @@ const createMemory = async (memory) => {
     return response.json(); // Retorna a resposta da API convertida para JSON
 }
 
+const getMemoryById = async (id)=> {
+
+    const response = await fetch(`${API_URL}/memories/${id}`);
+    const memories = await response.json();
+    return memories;
+}
+
+const deleteMemory = async (id) => {
+
+    const response = await fetch (`${API_URL}/memories/${id}`,{
+        method: "DELETE"
+    });
+    
+    return response.json();
+}
+
 // Função para converter uma imagem em Base64
 function imageToBase64(file) {
     return new Promise((resolve, reject) => {
@@ -36,4 +52,5 @@ function imageToBase64(file) {
         reader.onerror = error => reject(error); // Se houver erro, rejeita a promessa
     });
 }
-export default(getMemories, createMemory)
+
+export default {getMemories, createMemory, getMemoryById, deleteMemory}

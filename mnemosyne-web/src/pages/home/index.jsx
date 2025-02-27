@@ -9,7 +9,6 @@ const Home = () => {
 
     useEffect (() => {
         // Esse método é executado toda vez que a tela inicia.
-        document.title = "Home"
         getMemoriesList();
 
     },[]);
