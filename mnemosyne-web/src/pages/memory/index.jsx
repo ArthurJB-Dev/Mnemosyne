@@ -10,6 +10,7 @@ const Memory = () => {
 
     useEffect (() => {
         // Esse método é executado toda vez que a tela inicia.
+        document.title = "Memória"
         const parametros = window.location.search;
         const urlsearch = new URLSearchParams(parametros);
         const memoryId = urlsearch.get("id")
